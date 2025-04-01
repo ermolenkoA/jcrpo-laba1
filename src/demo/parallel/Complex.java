@@ -49,6 +49,16 @@ public class Complex {
     private double re;   // the real part
     private double im;   // the imaginary part
 
+    /**
+     New operation
+     */
+    public Complex minus(Complex other) {
+        re -= other.re;
+        im -= other.im;
+        return this;
+    }
+
+
     /** 
      * create a new object with the given real and imaginary parts
      * 
