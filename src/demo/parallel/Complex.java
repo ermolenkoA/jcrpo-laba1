@@ -58,6 +58,22 @@ public class Complex {
         return this;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Complex complex = (Complex) obj;
+        return Double.compare(complex.re, re) == 0 && Double.compare(complex.im, im) == 0;
+    }
+
+    @Override
+    public String toString() {
+        return this.re + " + " + this.im + "i";
+    }
 
     /** 
      * create a new object with the given real and imaginary parts
